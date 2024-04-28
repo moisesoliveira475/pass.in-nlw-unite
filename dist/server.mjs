@@ -1,4 +1,7 @@
 import {
+  registerForEvent
+} from "./chunk-4VV3QZET.mjs";
+import {
   errorHandler
 } from "./chunk-FJXIMKDJ.mjs";
 import {
@@ -13,13 +16,10 @@ import {
 } from "./chunk-N7AL2SQH.mjs";
 import {
   getEventAttendees
-} from "./chunk-3JOCUKYO.mjs";
+} from "./chunk-VAWXYXLU.mjs";
 import {
   getEvent
 } from "./chunk-3BK2S2WR.mjs";
-import {
-  registerForEvent
-} from "./chunk-4VV3QZET.mjs";
 import "./chunk-JRO4E4TH.mjs";
 import "./chunk-JV6GRE7Y.mjs";
 
