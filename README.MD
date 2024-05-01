@@ -30,3 +30,5 @@ npx prisma studio
 npm i zod para validação dos dados da api
 
 "build": "tsup src --format esm"
+
+containarize application
