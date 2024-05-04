@@ -21,7 +21,7 @@ jobs:
           echo "sha=$SHA" >> GITHUB_OUTPUT
 
       - name: Build docker image
-        run: docker build -t moises475/PASS.IN-BACKEND:${{ steps.generate_sha.outputs.sha }} .
+        run: docker build -t moises475/passin-backend-api-pass-in:${{ steps.generate_sha.outputs.sha }} .
 
       - name: Log into the container registry
         uses: docker/login-action@v3
@@ -31,4 +31,4 @@ jobs:
 
       - name: Push image
         run: |
-          docker push moises475/pass.in-backend:${{ steps.generate_sha.outputs.sha }}
+          docker push moises475/passin-backend-api-pass-in:${{ steps.generate_sha.outputs.sha }}
