@@ -31,4 +31,4 @@ jobs:
 
       - name: Push image
         run: |
-          docker push moises475/api-pass-in:${{ steps.generate_sha.outputs.sha }}
+          docker push moises475/pass.in-backend:${{ steps.generate_sha.outputs.sha }}
