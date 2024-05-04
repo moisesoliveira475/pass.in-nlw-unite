@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: generate sha
+      - name: Generate sha
         id: generate_sha
         run: |
           SHA=$(echo $GITHUB_SHA | head -c7)
@@ -23,4 +23,12 @@ jobs:
       - name: Build docker image
         run: docker build -t moises475/nlw.service.passin:${{ steps.generate_sha.outputs.sha }} .
 
-      
+      - name: Log into the container registry
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Push image
+        run: |
+          docker push moises475/nlw.service.passin:${{ steps.generate_sha.outputs.sha }}
